@@ -13,7 +13,7 @@ connectDB();
 
 // Middleware
 app.use(cors({
-  origin: process.env.FRONTEND_URL || 'https://af-2-iresh-eranga-main.vercel.app/api', // Replace with your Vercel frontend URL
+  origin: 'https://af-2-iresh-eranga-main.vercel.app', // Replace with your Vercel frontend URL
   credentials: true,
 }));
 app.use(express.json());
