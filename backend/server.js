@@ -14,8 +14,8 @@ connectDB();
 // Middleware
 app.use(cors(
   {
-    origin:[""],
-    method:[""],
+    origin:["https://af-2-iresh-eranga-main-api.vercel.app"],
+    methods:["POST","GET"],
     credentials:true
   }
 ));
