@@ -12,7 +12,13 @@ const app = express();
 connectDB();
 
 // Middleware
-app.use(cors());
+app.use(cors(
+  {
+    origin:[""],
+    method:[""],
+    credentials:true
+  }
+));
 app.use(express.json());
 app.use(
   session({
