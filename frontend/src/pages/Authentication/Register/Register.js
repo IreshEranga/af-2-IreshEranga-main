@@ -34,7 +34,8 @@ const Register = () => {
     }
 
     try {
-      const response = await axios.post(`${process.env.REACT_APP_BACKEND_API}/api/users/register`, formData);
+      const apiUrl = process.env.REACT_APP_API_URL || 'https://af-2-iresh-eranga-main-be.vercel.app';
+      const response = await axios.post(`${apiUrl}/users/register`, formData);
       const { token } = response.data;
 
       // Store token in localStorage

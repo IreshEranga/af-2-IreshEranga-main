@@ -27,7 +27,8 @@ const Favorites = () => {
 
     const fetchFavorites = async () => {
       try {
-        const response = await axios.get(`${process.env.REACT_APP_BACKEND_API}/api/users/favorites`, {
+        const apiUrl = process.env.REACT_APP_API_URL || 'https://af-2-iresh-eranga-main-be.vercel.app';
+        const response = await axios.get(`${apiUrl}/users/favorites`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         // Fetch full country data for each favorite cca3
