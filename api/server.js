@@ -13,8 +13,9 @@ connectDB();
 
 // Middleware
 const allowedOrigins = [
-  'https://af-2-iresh-eranga-main-be.vercel.app',
-  'http://localhost:3000' // For local development
+  'https://af-2-iresh-eranga-main.vercel.app', // Frontend
+  'https://af-2-iresh-eranga-main-be.vercel.app', // Backend
+  'http://localhost:3000' // Local development
 ];
 
 app.use(cors({
@@ -27,6 +28,7 @@ app.use(cors({
   },
   credentials: true,
 }));
+app.options('*', cors()); // Handle preflight requests
 app.use(express.json());
 app.use(
   session({
