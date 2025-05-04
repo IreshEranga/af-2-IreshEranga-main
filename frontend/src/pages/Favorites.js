@@ -27,7 +27,7 @@ const Favorites = () => {
 
     const fetchFavorites = async () => {
       try {
-        const apiUrl = process.env.REACT_APP_API_URL || 'https://af-2-iresh-eranga-main.vercel.app/api';
+        const apiUrl = process.env.REACT_APP_API_URL || 'https://af-2-iresh-eranga-main-kjnl.vercel.app/api';
         const response = await axios.get(`${apiUrl}/users/favorites`, {
           headers: { Authorization: `Bearer ${token}` },
         });

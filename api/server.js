@@ -14,7 +14,7 @@ connectDB();
 // Middleware
 const allowedOrigins = [
   'https://af-2-iresh-eranga-main.vercel.app', // Frontend
-  'https://af-2-iresh-eranga-main-be.vercel.app', // Backend
+  'https://af-2-iresh-eranga-main-kjnl.vercel.app', // Backend
   'http://localhost:3000' // Local development
 ];
 
